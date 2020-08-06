@@ -1,0 +1,31 @@
+{
+  "title": "Change caps lock to control or escape.",
+  "rules": [
+    {
+      "description": "Change caps lock to escape by itself or control when used in combination.",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "escape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
